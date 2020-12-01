@@ -1,25 +1,31 @@
-var num_children = $('#up-left').children().length;
-var child_height = $('#up-left').height() / num_children;
-var half_way = num_children * child_height / 2;
-$(window).scrollTop(half_way);
 var ul = '#up-left';
 var dr = '#down-right';
-function crisscross() {
-    $(ul).css('bottom', '-' + window.scrollY + 'px');
-    $(dr).css('bottom', '-' + window.scrollY + 'px');
-    var ulc = $(ul).children();
-    var drc = $(dr).children();
-    var corners = [ulc.first(),ulc.last(),drc.last(),drc.first()];
-    /*
-    if (window.scrollY > half_way ) {
-        $(window).scrollTop(half_way - child_height);
-        corners[2].appendTo(ul);
-        corners[0].prependTo(dr);
-    } else if (window.scrollY < half_way - child_height) {
-        $(window).scrollTop(half_way);
-        corners[1].appendTo(dr);
-        corners[3].prependTo(ul);
+
+$(window).scroll(dualScroll);
+
+function dualScroll(){
+      var sh = $(ul).height() - window.innerHeight;
+  
+      if ( $(window).scrollTop() >= sh ) {
+        $(window).scrollTop(1);
+  
+      }
+      else if ( $(window).scrollTop() == 0 ) {
+        $(window).scrollTop(sh - 1);
+      }
+  
+      $(dr).css({"transform": "translate3d(0, " + ((((sh) - $(window).scrollTop())* -1)) + "px, 0)"});
+  }
+
+ /* function dualScrollAnimated(){
+    var sh = $(ul).height() - window.innerHeight;
+
+    if ( $(window).scrollTop() >= sh ) {
+      $(window).animate({scrollTop: $(window).scrollTop(1)}, 3000);
     }
-    */
-}
-$(window).scroll(crisscross);
+    else if ( $(window).scrollTop() == 0 ) {
+      $(window).animate({scrollTop: $(window).scrollTop(sh - 1)}, 3000);
+    }
+
+    $(dr).css({"transform": "translate3d(0, " + ((((sh) - $(window).scrollTop())* -1)) + "px, 0)"});
+  }*/

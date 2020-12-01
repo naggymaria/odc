@@ -1,12 +1,13 @@
 div#content {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top:0;
-    right:0;
-    bottom:0;
-    left:0;
+    opacity: 1;
+    pointer-events: auto;
+    display: block;
 }
+
+html {
+    scroll-behavior: smooth;
+  }
+
 h1 {
     margin: 0;
     padding: 0;
@@ -27,22 +28,20 @@ h1 {
     background: grey;
 }
 div#up-left {
-    /*position:absolute;
-    */z-index:4px;
-    left: 0;
-    top: 0px;
     width: 50%;
-    margin: 0;
-    padding: 0;
+    left: 0;
+    position: relative;
+    background: black;
+    transform-style: preserve-3d;
 }
 div#down-right {
-    position:fixed;
-    bottom: 0px;
-    z-index: 4px;
-    left: 50%;
     width: 50%;
-    margin: 0;
-    padding: 0;
+    left: 50%;
+    top: 0;
+    border-left: 1px solid white;
+    position: fixed;
+    will-change: transform;
+    backface-visibility: hidden;
 }
 .gfy {
     visibility:none;
