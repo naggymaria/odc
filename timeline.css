@@ -17,32 +17,103 @@ h1 {
     position: relative;
     vertical-align:top;
     width: 100%;
-    height: 500px;
+    height: 700px;
     margin: 0;
     padding: 0;
+    background-color: #B2CEA8;
+    border-style: solid;
+    border-width: medium;
+    border-bottom-width: 0px;
+    border-color: #ffffff;
 }
-.black {
-    background: black;
-}
-.white {
-    background: grey;
-}
+
 div#up-left {
-    width: 50%;
+    width: 47%;
     left: 0;
     position: relative;
-    background: black;
     transform-style: preserve-3d;
+    margin: 0;
+    top: 0;
+    padding: 0;
 }
 div#down-right {
-    width: 50%;
-    left: 50%;
+    width:47%;
+    left: 47%;
     top: 0;
-    border-left: 1px solid white;
+    margin: 0;
+    padding: 0;
     position: fixed;
     will-change: transform;
     backface-visibility: hidden;
 }
-.gfy {
-    visibility:none;
+
+#nav-bar {
+    position: fixed;
+    width: 6%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #B2CEA8;
+    border-style: solid;
+    border-width: medium;
+    border-bottom-width: 0px;
+    border-color: #ffffff;
+}
+
+.solmente {
+    position: relative;
+    height: 40%;
+    width: 100%;
+}
+
+.solmente-image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+.tab {
+    height: 60%;
+    width: 100%;
+}
+
+.sobre {
+    height: 40%;
+    width: 100%;
+    position: relative;
+}
+
+.por-estacao {
+    height: 40%;
+    width: 100%;
+    position: relative;
+}
+
+.roda-texto {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+.insta {
+    position: relative;
+    width: 100%;
+    height: 20%;
+}
+
+.insta-image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
 }
