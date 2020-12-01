@@ -1,5 +1,5 @@
 body {
-    background-color: #B2CEA8;
+    background: linear-gradient(0deg,#8AAFC3 8%, #CFC28E 15%, #CFC28E 30%, #B2CEA8 35%, #B2CEA8 50%,#C59A94 55%, #C59A94 73%, #8AAFC3 80%,#8AAFC3 100%);
 }
 
 div#content {
